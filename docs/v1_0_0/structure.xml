@@ -43,7 +43,7 @@
     </parse_markers>
     <source>eJxVjM0KwjAQhO/7FHsQCkXaB6jiH969Ww/5WWlK2oRsior47sZKK85pd+abWW184wF60RF7oQiPWneCm/pgjZdOBF0BDEz4MKaWzkWOQfh6P107ZooJKfMcMMfxRTn02hJeXcB5BlsuElGCsoL5538bdI/Ua8b/XXgCJvlBWqNwwW4Iik4iNrjGbCvdjUKppqFSG45Z9ddoOZHn0foom+GiM33RcrYcs0sFL3gDVZBWjQ==</source>
   </file>
-  <file path="Clipboard.php" generated-path="Clipboard.html" hash="098111eb614c24cb1fb785d3560e4897" package="Default">
+  <file path="Clipboard.php" generated-path="Clipboard.html" hash="916337eac399856cb231f3792200fe4b" package="Default">
     <docblock line="0">
       <description>Created by PhpStorm.</description>
       <long-description>User: edd
@@ -77,6 +77,24 @@ echo \Eddmash\Clipboard\Clipboard::widget([
 ```</long-description>
         <tag name="package" line="34" description="Default"/>
       </docblock>
+      <constant namespace="Eddmash\Clipboard" line="50" package="Default">
+        <name>CUT</name>
+        <full_name>\Eddmash\Clipboard\Clipboard::CUT</full_name>
+        <value>2</value>
+        <docblock line="50">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </constant>
+      <constant namespace="Eddmash\Clipboard" line="51" package="Default">
+        <name>COPY</name>
+        <full_name>\Eddmash\Clipboard\Clipboard::COPY</full_name>
+        <value>1</value>
+        <docblock line="51">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </constant>
       <property static="false" visibility="public" namespace="Eddmash\Clipboard" line="41" package="Default">
         <name>$type</name>
         <full_name>\Eddmash\Clipboard\Clipboard::type</full_name>
@@ -87,37 +105,52 @@ echo \Eddmash\Clipboard\Clipboard::widget([
           <tag name="var" line="41" description="" type="" variable=""/>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Eddmash\Clipboard" line="48" package="Default">
+      <property static="false" visibility="public" namespace="Eddmash\Clipboard" line="47" package="Default">
+        <name>$action</name>
+        <full_name>\Eddmash\Clipboard\Clipboard::action</full_name>
+        <default>1</default>
+        <docblock line="47">
+          <description>Which action to perfom, either a cut or a simple copy.</description>
+          <long-description></long-description>
+          <tag name="var" line="47" description="" type="" variable=""/>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Eddmash\Clipboard" line="58" package="Default">
         <name>run</name>
         <full_name>\Eddmash\Clipboard\Clipboard::run()</full_name>
-        <docblock line="48">
+        <docblock line="58">
           <description>Executes the widget.</description>
           <long-description></long-description>
-          <tag name="return" line="48" description="the result of widget execution to be outputted" type="string">
+          <tag name="return" line="58" description="the result of widget execution to be outputted" type="string">
             <type>string</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="Eddmash\Clipboard" line="70" package="Default">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Eddmash\Clipboard" line="82" package="Default">
         <name>input</name>
         <full_name>\Eddmash\Clipboard\Clipboard::input()</full_name>
-        <docblock line="70">
+        <docblock line="82">
           <description>Output the input type.</description>
           <long-description></long-description>
-          <tag name="param" line="70" description="" type="\yii\web\View" variable="$view">
+          <tag name="param" line="82" description="&lt;p&gt;the view we are creating the output.&lt;/p&gt;" type="\yii\web\View" variable="$view">
             <type>\yii\web\View</type>
           </tag>
-          <tag name="param" line="70" description="" type="" variable="$type"/>
-          <tag name="param" line="70" description="" type="null" variable="$name">
+          <tag name="param" line="82" description="&lt;p&gt;the input type.&lt;/p&gt;" type="string" variable="$type">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="82" description="&lt;p&gt;name of the input element.&lt;/p&gt;" type="null" variable="$name">
             <type>null</type>
           </tag>
-          <tag name="param" line="70" description="" type="null" variable="$value">
+          <tag name="param" line="82" description="&lt;p&gt;the value for the input.&lt;/p&gt;" type="null" variable="$value">
             <type>null</type>
           </tag>
-          <tag name="param" line="70" description="" type="array" variable="$options">
+          <tag name="param" line="82" description="&lt;p&gt;the value for the input.&lt;/p&gt;" type="null" variable="$value">
+            <type>null</type>
+          </tag>
+          <tag name="param" line="82" description="&lt;p&gt;any other attribute options to pass to the input.&lt;/p&gt;" type="array" variable="$options">
             <type>array</type>
           </tag>
-          <tag name="return" line="70" description="" type="string">
+          <tag name="return" line="82" description="" type="string">
             <type>string</type>
           </tag>
         </docblock>
@@ -129,7 +162,7 @@ echo \Eddmash\Clipboard\Clipboard::widget([
         <argument line="0" by_reference="false">
           <name>$type</name>
           <default></default>
-          <type/>
+          <type>string</type>
         </argument>
         <argument line="0" by_reference="false">
           <name>$name</name>
@@ -146,28 +179,38 @@ echo \Eddmash\Clipboard\Clipboard::widget([
           <default>array()</default>
           <type>array</type>
         </argument>
+        <argument line="0" by_reference="false">
+          <name>$action</name>
+          <default></default>
+          <type/>
+        </argument>
       </method>
-      <method final="false" abstract="false" static="true" visibility="private" namespace="Eddmash\Clipboard" line="86" package="Default">
+      <method final="false" abstract="false" static="true" visibility="private" namespace="Eddmash\Clipboard" line="101" package="Default">
         <name>asHtml</name>
         <full_name>\Eddmash\Clipboard\Clipboard::asHtml()</full_name>
-        <docblock line="86">
+        <docblock line="101">
           <description>Creates the actual html.</description>
           <long-description></long-description>
-          <tag name="param" line="86" description="" type="\yii\web\View" variable="$view">
+          <tag name="param" line="101" description="&lt;p&gt;the view we are creating the output.&lt;/p&gt;" type="\yii\web\View" variable="$view">
             <type>\yii\web\View</type>
           </tag>
-          <tag name="param" line="86" description="" type="" variable="$type"/>
-          <tag name="param" line="86" description="" type="null" variable="$name">
+          <tag name="param" line="101" description="&lt;p&gt;the input type.&lt;/p&gt;" type="string" variable="$type">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="101" description="&lt;p&gt;the action to perform either cut or copy&lt;/p&gt;" type="integer" variable="$action">
+            <type>integer</type>
+          </tag>
+          <tag name="param" line="101" description="&lt;p&gt;name of the input element.&lt;/p&gt;" type="null" variable="$name">
             <type>null</type>
           </tag>
-          <tag name="param" line="86" description="" type="null" variable="$value">
+          <tag name="param" line="101" description="&lt;p&gt;the value for the input.&lt;/p&gt;" type="null" variable="$value">
             <type>null</type>
           </tag>
-          <tag name="param" line="86" description="" type="array" variable="$options">
+          <tag name="param" line="101" description="&lt;p&gt;any other attribute options to pass to the input.&lt;/p&gt;" type="array" variable="$options">
             <type>array</type>
           </tag>
-          <tag name="return" line="86" description="" type="string">
-            <type>string</type>
+          <tag name="return" line="101" description="" type="mixed">
+            <type>mixed</type>
           </tag>
         </docblock>
         <argument line="0" by_reference="false">
@@ -178,7 +221,12 @@ echo \Eddmash\Clipboard\Clipboard::widget([
         <argument line="0" by_reference="false">
           <name>$type</name>
           <default></default>
-          <type/>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$action</name>
+          <default></default>
+          <type>integer</type>
         </argument>
         <argument line="0" by_reference="false">
           <name>$name</name>
@@ -197,7 +245,10 @@ echo \Eddmash\Clipboard\Clipboard::widget([
         </argument>
       </method>
     </class>
-    <source>eJzVVluL4zYUfvevOE0DsodcmC6U4jSzXdKF3YXShU63lCQwiq3EWuQLkpxMKPPf9+jixImd6UtfKoaJrXP7zvmOjvzz2yqrgundXQB3sJCMapbC5gifs+oPXcp8Yvb/VEzGwNLUvPyKKjHc30/N349m55HnuPMmvv8JPv9mDKZBUNCcqYomDN6naU5VtloIXm1KKtNZENSKwZHz1aYstdKSVqsPOheznv2PRVXrv3i6Y/oszpiomFSrd1LS4wf7chYe2Gb1hbMDhmnSaiLDwToCroDC35z/AAeMgdawLSXojEHSqE6+KggzrSsVT6en3a9qkpT5NDJJGs8fNSRloSkvjMdTHIcXDhlPMkhsUVFeADfJABMsZ4UGpY+CISSdwSlfW+7HjDVIy1qjSY+xNaMYvTpCWWleFpPAUUV3DNgzzSvBYg/z6enJsOxeWJKVsOqwcn6KYxc8XBp1u0hepkwQmD/A0D6OziKqteSbWjMrJiynXJCW3KFTZP6wJFiKtCzEEV8Gg7XRWUezM0jbOomgSrU4Y8+aFamCVicE/wTGtaXXLFeyx2PFoNz6QukSsCMmXqHR+2VPpX+e2t+q3giewFCjMXbMldv3zyypDXn6REnHo2S6lgWyKXmxs4qSqVpoA8WzyKwbrIJBtWGeVTxpfVC2dZFYXVkXYWQlLl2zmmBMbOPYJhqeZGYNdcbV+AGDmiMQRqM+qcm1V3Ci8lJqzmYco893jfwLFTULvZVriI6P/ti+G04iQz+ul07pf7c1svX0hCLqTvErKmkOJlcY7vH/lcDSerVX1EIgHDOg+iV7k9yViJpJA8ML9DdaoI9TpaluU+uYO8MeOaQjBwvmFsrIQzm/+vC4sVy/2hlUGc7CHt+N07O3mwws/OAyFNBE11RAhl7/fxxIvsdEOiT4Iv2nLPAthN9xpXB6NnpLYpySdRS19OyJuFJAh34MNRovQVfXQHO65mnWo2HhOhWPfO6ww1v3E0PoyhR5DT/4rBueomHrYrUH3593H2IEhKdkBFsqFItmF8lbe4znZPFlwtb3FW6c7XzbAuCGDU3ThVILcxW0w+I1nY/NjStLQVqRXzOy8aJ2isaBuUPn3k7TXUhSvid9Y++G8ErBHmgsCSGtgzV5zQI/jgpjsMAbHH+XHd1mkZRqOj59gow1lciIu2y/JxMsahfZLVtqO9/ZJjbwbVN7DztVm914J8u6GmOR8exsdDH+t9j2+8bHqqUqZVyVHCsvZzfCrju7UVdxeQMYHrBL5QvFRDAqt/yZnGNctIQ5/uMHyXZcIcBPKhwUOBVOHyEhmZiMBybjyYBEg7axnzxNWzXj9CX4BroNLLo=</source>
+    <parse_markers>
+      <error line="82" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $options in input()</error>
+    </parse_markers>
+    <source>eJzFV+tr20gQ/+6/Ys4XkBT8ID04DvmcXvEV2oOjgUtbih3IWlpbW/RidxXHHPnfb2Yfsmwr6X0oVARrtfOe+c3s5vfXdVYPppeXA7iEheRM8xTWe7jJ6n90JYsJ7X9UXMbA05Q+/kSWGK6upvT3K+3cigJ3fomvfoObv0lgOhiUrOCqZgmHt2laMJWtFrmo1xWT6WwwaBSHvRCrdVVppSWrV+90kc969t+XdaM/i3TL9YGc8bzmUq3eSMn278zHgbjj69UnwXdoxoflLcPOKAKhgMEXIV7BDm2gNGwqCTrjkHjWyVcFYaZ1reLptN39qiZJVUwjCpI0v9eQVKVmoiSNrR3rL+wykWSQmKQivQRBwQDPecFLDUrvc44u6QzaeE26bzPuPa0ajSI9wkaMofV6D1WtRVVOBrZUbMuBP7Kiznns3Ly/v6cq2w+eZBWszqpyWMWxNR4uid08QVGlPA9gfg0XZjk6kJjWUqwbzQ054AUTedChW+9UML9eBpiKtCrzPX4Mh3fEcxfNDk4a6CQ5U6pTM/6oeZkq6CBh8O+AVJvy0mNTdruvOVQblyhdASJi4hg83x8PTLr11LzrZp2LBC40CiNiTtR+NhVkCUVAGhEqm6oYAcfsI2ow/2ipooUSlHBTj8k3jVmF8ys0aPYRQ0rD4uPt/NWsu/Hh5othOvHq7SNHuwgp3QLlLE7JdSNLxJgU5dYwSq6aXFOCHLa4UeMiW3OHNez/Pp83TWmzIJsyjAzFFoEeb4znmzhmino5bIn0XOhMqPE1WqXODKNRH5VK0Euw6eonefAdU8mDOEZzbzz9E8sbHjopC+EzHf1uOfy2pMiW6OmsLB9M/kyuHQQxoLPC1EyyAigNcPFAv8RvFjsOTHI7L3zRbE0mJ9Kuqga0z9jzrGWT53BB0xjMD5b/IOCGSb/MA2XMemdWfkQa0e8gwmh4w4VLL044HGS2q3w9wNOo82go4PtMXT/i+yCsNOa1g2SjJjxUYmQTOnLpmpugRj6q9tM7NYfl3cj38mlHiA2Evs3nc5KM4mNwuaEyd11DvT5rOXDgic3sxf46cdn1iPXdO33w9lnQLtzpRHlFHQ3LIUP1Pxq2Ao84nyLnWncEy8KPYDeAae7+GOR/Jxi3+C3E4+kEluIBa3SGXweEPgAfoeF/IbkPwD8JpfAa4PmWAWkP7qKow2ewfMKACt156jmeBue85JrlpdWsh8O4a1mc53PrO7y2rxhCi6nIcbiz0qgRKQp2bojmPHDHgDMxgkCkwQg2LFc8mh13L8mjPUs7aV6j+8Rv17Pttz2DWJoulFrQnaZrliA8pqujrPKgY/klIWMv6oZICugyOHdymm3DIBUPQd9p+AzxhMGAElMSBJ3hMXlJAm/5JQkssAXxvTzj9U+QMs3G7V16rJnEithb48/BBJN67tlzshbg9kLadz04kjU3SmvHhDfeyqqpx5hl7KK1LsffMm5u6lZB0khVybiucELhfx09yaTn7mw3OmdcPuMYdtgx8xFjknMmN+IxONg4wgQNgvG15Fuh0MG/VDgscT601+kwmFDEQ4p4MgyiYVfYjSCPK39mPA3+A7UeEyA=</source>
   </file>
   <package name="Default" full_name="Default"/>
   <package name="global" full_name="global"/>
