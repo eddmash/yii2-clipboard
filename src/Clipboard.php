@@ -41,15 +41,26 @@ class Clipboard extends InputWidget
     public $type;
 
     /**
+     * Which action to perfom, either a cut or a simple copy.
+     * @var
+     */
+    public $action=1;
+
+
+    const CUT=2;
+    const COPY=1;
+
+    /**
      * Executes the widget.
      *
      * @return string the result of widget execution to be outputted
      */
     public function run()
     {
-        return self::input(
+        return self::asHtml(
             $this->getView(),
             $this->type,
+            $this->action,
             $this->attribute,
             Html::getAttributeValue($this->model, $this->attribute),
             $this->options
@@ -59,11 +70,11 @@ class Clipboard extends InputWidget
     /**
      * Output the input type.
      *
-     * @param View $view
-     * @param $type
-     * @param null  $name
-     * @param null  $value
-     * @param array $options
+     * @param View $view the view we are creating the output.
+     * @param string $type the input type.
+     * @param null $name name of the input element.
+     * @param null $value the value for the input.
+     * @param array $options any other attribute options to pass to the input.
      *
      * @return string
      */
@@ -75,15 +86,15 @@ class Clipboard extends InputWidget
     /**
      * Creates the actual html.
      *
-     * @param View $view
-     * @param $type
-     * @param null  $name
-     * @param null  $value
-     * @param array $options
-     *
-     * @return string
+     * @param View $view the view we are creating the output.
+     * @param string $type the input type.
+     * @param int $action the action to perform either cut or copy
+     * @param null $name name of the input element.
+     * @param null $value the value for the input.
+     * @param array $options any other attribute options to pass to the input.
+     * @return mixed
      */
-    private static function asHtml(View $view, $type, $name = null, $value = null, $options = [])
+    private static function asHtml(View $view, $type, $action=1,$name = null, $value = null, $options = [])
     {
         if (!isset($options['type'])) {
             $options['type'] = $type;
@@ -104,7 +115,7 @@ class Clipboard extends InputWidget
                 Html::tag('input', '', $options).
                 Html::tag('span', 'Copy', [
                         'data-clipboard-target' => '#'.$id,
-                        'data-clipboard-action' => 'copy',
+                        'data-clipboard-action' => $action,
                         'class' => 'input-group-addon btn-'.$id,
                         'style' => 'cursor:pointer;',
                     ]
