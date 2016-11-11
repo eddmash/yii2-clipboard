@@ -1,48 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project title="Clipboard Asset v1.0.0 Docs" version="v2.8.5">
   <partials/>
-  <file path="ClipboardAsset.php" generated-path="ClipboardAsset.html" hash="30fa361967768e630d9a838c3a119bda" package="Default">
-    <docblock line="0">
-      <description></description>
-      <long-description></long-description>
-      <tag name="package" line="0" description="Default"/>
-    </docblock>
-    <namespace-alias name="BootstrapAsset">\yii\bootstrap\BootstrapAsset</namespace-alias>
-    <class final="false" abstract="false" namespace="Eddmash\Clipboard" line="10" package="Default">
-      <extends>\yii\bootstrap\BootstrapAsset</extends>
-      <name>ClipboardAsset</name>
-      <full_name>\Eddmash\Clipboard\ClipboardAsset</full_name>
-      <docblock line="10">
-        <description>Asset bundle for Clipboard js.</description>
-        <long-description></long-description>
-        <tag name="package" line="10" description="Default"/>
-      </docblock>
-      <property static="false" visibility="public" namespace="Eddmash\Clipboard" line="12" package="Default">
-        <name>$sourcePath</name>
-        <full_name>\Eddmash\Clipboard\ClipboardAsset::sourcePath</full_name>
-        <default>'@bower/clipboard/dist'</default>
-        <docblock line="12">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </property>
-      <property static="false" visibility="public" namespace="Eddmash\Clipboard" line="13" package="Default">
-        <name>$js</name>
-        <full_name>\Eddmash\Clipboard\ClipboardAsset::js</full_name>
-        <default>array('clipboard.min.js')</default>
-        <docblock line="13">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </property>
-    </class>
-    <parse_markers>
-      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="12" code="PPC:ERR-50007">No summary for property $sourcePath</error>
-      <error line="13" code="PPC:ERR-50007">No summary for property $js</error>
-    </parse_markers>
-    <source>eJxVjM0KwjAQhO/7FHsQCkXaB6jiH969Ww/5WWlK2oRsior47sZKK85pd+abWW184wF60RF7oQiPWneCm/pgjZdOBF0BDEz4MKaWzkWOQfh6P107ZooJKfMcMMfxRTn02hJeXcB5BlsuElGCsoL5538bdI/Ua8b/XXgCJvlBWqNwwW4Iik4iNrjGbCvdjUKppqFSG45Z9ddoOZHn0foom+GiM33RcrYcs0sFL3gDVZBWjQ==</source>
-  </file>
   <file path="Clipboard.php" generated-path="Clipboard.html" hash="916337eac399856cb231f3792200fe4b" package="Default">
     <docblock line="0">
       <description>Created by PhpStorm.</description>
@@ -249,6 +207,48 @@ echo \Eddmash\Clipboard\Clipboard::widget([
       <error line="82" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $options in input()</error>
     </parse_markers>
     <source>eJzFV+tr20gQ/+6/Ys4XkBT8ID04DvmcXvEV2oOjgUtbih3IWlpbW/RidxXHHPnfb2Yfsmwr6X0oVARrtfOe+c3s5vfXdVYPppeXA7iEheRM8xTWe7jJ6n90JYsJ7X9UXMbA05Q+/kSWGK6upvT3K+3cigJ3fomvfoObv0lgOhiUrOCqZgmHt2laMJWtFrmo1xWT6WwwaBSHvRCrdVVppSWrV+90kc969t+XdaM/i3TL9YGc8bzmUq3eSMn278zHgbjj69UnwXdoxoflLcPOKAKhgMEXIV7BDm2gNGwqCTrjkHjWyVcFYaZ1reLptN39qiZJVUwjCpI0v9eQVKVmoiSNrR3rL+wykWSQmKQivQRBwQDPecFLDUrvc44u6QzaeE26bzPuPa0ajSI9wkaMofV6D1WtRVVOBrZUbMuBP7Kiznns3Ly/v6cq2w+eZBWszqpyWMWxNR4uid08QVGlPA9gfg0XZjk6kJjWUqwbzQ054AUTedChW+9UML9eBpiKtCrzPX4Mh3fEcxfNDk4a6CQ5U6pTM/6oeZkq6CBh8O+AVJvy0mNTdruvOVQblyhdASJi4hg83x8PTLr11LzrZp2LBC40CiNiTtR+NhVkCUVAGhEqm6oYAcfsI2ow/2ipooUSlHBTj8k3jVmF8ys0aPYRQ0rD4uPt/NWsu/Hh5othOvHq7SNHuwgp3QLlLE7JdSNLxJgU5dYwSq6aXFOCHLa4UeMiW3OHNez/Pp83TWmzIJsyjAzFFoEeb4znmzhmino5bIn0XOhMqPE1WqXODKNRH5VK0Euw6eonefAdU8mDOEZzbzz9E8sbHjopC+EzHf1uOfy2pMiW6OmsLB9M/kyuHQQxoLPC1EyyAigNcPFAv8RvFjsOTHI7L3zRbE0mJ9Kuqga0z9jzrGWT53BB0xjMD5b/IOCGSb/MA2XMemdWfkQa0e8gwmh4w4VLL044HGS2q3w9wNOo82go4PtMXT/i+yCsNOa1g2SjJjxUYmQTOnLpmpugRj6q9tM7NYfl3cj38mlHiA2Evs3nc5KM4mNwuaEyd11DvT5rOXDgic3sxf46cdn1iPXdO33w9lnQLtzpRHlFHQ3LIUP1Pxq2Ao84nyLnWncEy8KPYDeAae7+GOR/Jxi3+C3E4+kEluIBa3SGXweEPgAfoeF/IbkPwD8JpfAa4PmWAWkP7qKow2ewfMKACt156jmeBue85JrlpdWsh8O4a1mc53PrO7y2rxhCi6nIcbiz0qgRKQp2bojmPHDHgDMxgkCkwQg2LFc8mh13L8mjPUs7aV6j+8Rv17Pttz2DWJoulFrQnaZrliA8pqujrPKgY/klIWMv6oZICugyOHdymm3DIBUPQd9p+AzxhMGAElMSBJ3hMXlJAm/5JQkssAXxvTzj9U+QMs3G7V16rJnEithb48/BBJN67tlzshbg9kLadz04kjU3SmvHhDfeyqqpx5hl7KK1LsffMm5u6lZB0khVybiucELhfx09yaTn7mw3OmdcPuMYdtgx8xFjknMmN+IxONg4wgQNgvG15Fuh0MG/VDgscT601+kwmFDEQ4p4MgyiYVfYjSCPK39mPA3+A7UeEyA=</source>
+  </file>
+  <file path="ClipboardAsset.php" generated-path="ClipboardAsset.html" hash="30fa361967768e630d9a838c3a119bda" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="BootstrapAsset">\yii\bootstrap\BootstrapAsset</namespace-alias>
+    <class final="false" abstract="false" namespace="Eddmash\Clipboard" line="10" package="Default">
+      <extends>\yii\bootstrap\BootstrapAsset</extends>
+      <name>ClipboardAsset</name>
+      <full_name>\Eddmash\Clipboard\ClipboardAsset</full_name>
+      <docblock line="10">
+        <description>Asset bundle for Clipboard js.</description>
+        <long-description></long-description>
+        <tag name="package" line="10" description="Default"/>
+      </docblock>
+      <property static="false" visibility="public" namespace="Eddmash\Clipboard" line="12" package="Default">
+        <name>$sourcePath</name>
+        <full_name>\Eddmash\Clipboard\ClipboardAsset::sourcePath</full_name>
+        <default>'@bower/clipboard/dist'</default>
+        <docblock line="12">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="public" namespace="Eddmash\Clipboard" line="13" package="Default">
+        <name>$js</name>
+        <full_name>\Eddmash\Clipboard\ClipboardAsset::js</full_name>
+        <default>array('clipboard.min.js')</default>
+        <docblock line="13">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="12" code="PPC:ERR-50007">No summary for property $sourcePath</error>
+      <error line="13" code="PPC:ERR-50007">No summary for property $js</error>
+    </parse_markers>
+    <source>eJxVjM0KwjAQhO/7FHsQCkXaB6jiH969Ww/5WWlK2oRsior47sZKK85pd+abWW184wF60RF7oQiPWneCm/pgjZdOBF0BDEz4MKaWzkWOQfh6P107ZooJKfMcMMfxRTn02hJeXcB5BlsuElGCsoL5538bdI/Ua8b/XXgCJvlBWqNwwW4Iik4iNrjGbCvdjUKppqFSG45Z9ddoOZHn0foom+GiM33RcrYcs0sFL3gDVZBWjQ==</source>
   </file>
   <package name="Default" full_name="Default"/>
   <package name="global" full_name="global"/>
