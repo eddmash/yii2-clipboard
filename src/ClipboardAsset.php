@@ -12,8 +12,8 @@ use yii\web\AssetBundle;
  */
 class ClipboardAsset extends AssetBundle
 {
-    public $sourcePath = '@bower/clipboard/';
+    public $sourcePath = '@bower/clipboard/dist';
     public $js = [
-        'js/clipboard.js',
+        'clipboard.min.js',
     ];
 }
