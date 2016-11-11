@@ -42,13 +42,20 @@ class Clipboard extends InputWidget
 
     /**
      * Which action to perfom, either a cut or a simple copy.
+     *
      * @var
      */
-    public $action=1;
+    public $action = 'copy';
 
+    /**
+     * @ignore
+     */
+    const CUT = 'cut';
 
-    const CUT=2;
-    const COPY=1;
+    /**
+     * @ignore
+     */
+    const COPY = 'copy';
 
     /**
      * Executes the widget.
@@ -70,32 +77,34 @@ class Clipboard extends InputWidget
     /**
      * Output the input type.
      *
-     * @param View $view the view we are creating the output.
-     * @param string $type the input type.
-     * @param null $name name of the input element.
-     * @param null $value the value for the input.
-     * @param null $value the value for the input.
-     * @param array $options any other attribute options to pass to the input.
+     * @param View   $view    the view we are creating the output
+     * @param string $type    the input type
+     * @param null   $name    name of the input element
+     * @param null   $value   the value for the input
+     * @param null   $value   the value for the input
+     * @param array  $options any other attribute options to pass to the input
      *
      * @return string
      */
-    public static function input(View $view, $type, $name = null, $value = null, $options = [], $action=null)
+    public static function input(View $view, $type, $name = null, $value = null, $options = [], $action = null)
     {
-        if ($action===null):
+        if ($action === null):
             $action = self::COPY;
         endif;
+
         return self::asHtml($view, $type, $action, $name, $value, $options);
     }
 
     /**
      * Creates the actual html.
      *
-     * @param View $view the view we are creating the output.
-     * @param string $type the input type.
-     * @param int $action the action to perform either cut or copy
-     * @param null $name name of the input element.
-     * @param null $value the value for the input.
-     * @param array $options any other attribute options to pass to the input.
+     * @param View   $view    the view we are creating the output
+     * @param string $type    the input type
+     * @param int    $action  the action to perform either cut or copy
+     * @param null   $name    name of the input element
+     * @param null   $value   the value for the input
+     * @param array  $options any other attribute options to pass to the input
+     *
      * @return mixed
      */
     private static function asHtml(View $view, $type, $action, $name = null, $value = null, $options = [])
