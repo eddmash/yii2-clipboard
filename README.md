@@ -1,7 +1,7 @@
 yii2-clipboard
 =================================
 
-A Yii2 data provider that transpose data into a table format
+A Yii2 extension that makes it easy to copy input item value on to clipboard.
 
 
 ## Installation
@@ -27,8 +27,34 @@ to the ```require``` section of your `composer.json` file.
 
 
 ## Usage
+
+You can use the widget which create a input that has copy button.
+
 ```php 
+
+    echo \Eddmash\Clipboard\Clipboard::widget([
+        'model' => $model,
+        'attribute' => 'email',
+        'options'=>['readonly'=>""]
+    ]); 
+
+```
+Or if you need to use it without a model. 
+The `Clipboard::input()` method is works like `HTML::tag()` actually its use it to create its output.
+The only difference is that it takes the first argument as the view object on which the output is being done.
+
+```php 
+    
+    $url = "https://packagist.org/packages/eddmash/yii2-clipboard";
+    Clipboard::input($this, 'text', 'url', $url, ['id' => 'url', 'readonly' => true])
+
 ```
 
-Learn more [yii2-transpose-dataprovider documentation](https://eddmash.github.io/yii2-transpose-dataprovider/docs/v1_0_0/classes/Eddmash.TransposeDataProvider.TransposeDataProvider.html)
+Or if simply need the composer.js loaded on a view
+
+```php 
+    \Eddmash\Clipboard\ClipboardAsset::register($this)
+```
+
+Learn more [yii2-clipboard documentation](https://eddmash.github.io/yii2-clipboard/docs/v1_0_0/classes/Eddmash.Clipboard.Clipboard.html)
 
