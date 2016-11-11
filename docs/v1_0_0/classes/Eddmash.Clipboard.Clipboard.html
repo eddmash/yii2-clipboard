@@ -33,7 +33,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">3</span></a></li>
+                <span class="label label-info">4</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -72,7 +72,17 @@
 </li>
 <li class="nav-header">
 <i title="Properties" class="icon-custom icon-property"></i> Properties
-                    <ul><li class="property public "><a href="#property_type" title="$type() :: The Type of input to use."><span class="description"></span><pre>$type</pre></a></li></ul>
+                    <ul>
+<li class="property public "><a href="#property_action" title="$action() :: Which action to perfom, either a cut or a simple copy."><span class="description"></span><pre>$action</pre></a></li>
+<li class="property public "><a href="#property_type" title="$type() :: The Type of input to use."><span class="description"></span><pre>$type</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i title="Constants" class="icon-custom icon-constant"></i> Constants
+                    <ul>
+<li class="constant  "><a href="#constant_COPY" title="COPY() :: "><span class="description">COPY</span><pre>COPY</pre></a></li>
+<li class="constant  "><a href="#constant_CUT" title="CUT() :: "><span class="description">CUT</span><pre>CUT</pre></a></li>
+</ul>
 </li>
 </ul>
 </div>
@@ -110,28 +120,27 @@ echo \Eddmash\Clipboard\Clipboard::widget([
 <i title="Methods" class="icon-custom icon-method"></i> Methods</h3>
 <a id="method_input"></a><div class="element clickable method public method_input " data-toggle="collapse" data-target=".method_input .collapse" title="public">
 <h2>Output the input type.</h2>
-<pre>input(\yii\web\View $view, $type, null $name<code> = null</code>, null $value<code> = null</code>, array $options<code> = array()</code>) : string</pre>
+<pre>input(\yii\web\View $view, string $type, null $name<code> = null</code>, null $value<code> = null</code>, array $options<code> = array()</code>, $action) : string</pre>
 <div class="labels"><span class="label">Static</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$view</h4>
-<code>\yii\web\View</code>
-</div>
-<div class="subelement argument"><h4>$type</h4></div>
+<code>\yii\web\View</code><p>the view we are creating the output.</p></div>
+<div class="subelement argument">
+<h4>$type</h4>
+<code>string</code><p>the input type.</p></div>
 <div class="subelement argument">
 <h4>$name</h4>
-<code>null</code>
-</div>
+<code>null</code><p>name of the input element.</p></div>
 <div class="subelement argument">
 <h4>$value</h4>
-<code>null</code>
-</div>
+<code>null</code><code>null</code><p>the value for the input.</p></div>
 <div class="subelement argument">
 <h4>$options</h4>
-<code>array</code>
-</div>
+<code>array</code><p>any other attribute options to pass to the input.</p></div>
+<div class="subelement argument"><h4>$action</h4></div>
 <h3>Returns</h3>
 <div class="subelement response"><code>string</code></div>
 </div></div>
@@ -149,34 +158,45 @@ echo \Eddmash\Clipboard\Clipboard::widget([
 </div>
 <a id="method_asHtml"></a><div class="element clickable method private method_asHtml " data-toggle="collapse" data-target=".method_asHtml .collapse" title="private">
 <h2>Creates the actual html.</h2>
-<pre>asHtml(\yii\web\View $view, $type, null $name<code> = null</code>, null $value<code> = null</code>, array $options<code> = array()</code>) : string</pre>
+<pre>asHtml(\yii\web\View $view, string $type, integer $action, null $name<code> = null</code>, null $value<code> = null</code>, array $options<code> = array()</code>) : mixed</pre>
 <div class="labels"><span class="label">Static</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$view</h4>
-<code>\yii\web\View</code>
-</div>
-<div class="subelement argument"><h4>$type</h4></div>
+<code>\yii\web\View</code><p>the view we are creating the output.</p></div>
+<div class="subelement argument">
+<h4>$type</h4>
+<code>string</code><p>the input type.</p></div>
+<div class="subelement argument">
+<h4>$action</h4>
+<code>integer</code><p>the action to perform either cut or copy</p></div>
 <div class="subelement argument">
 <h4>$name</h4>
-<code>null</code>
-</div>
+<code>null</code><p>name of the input element.</p></div>
 <div class="subelement argument">
 <h4>$value</h4>
-<code>null</code>
-</div>
+<code>null</code><p>the value for the input.</p></div>
 <div class="subelement argument">
 <h4>$options</h4>
-<code>array</code>
-</div>
+<code>array</code><p>any other attribute options to pass to the input.</p></div>
 <h3>Returns</h3>
-<div class="subelement response"><code>string</code></div>
+<div class="subelement response"><code>mixed</code></div>
 </div></div>
 </div>
 <h3>
 <i title="Properties" class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_action"> </a><div class="element clickable property public property_action" data-toggle="collapse" data-target=".property_action .collapse" title="public">
+<h2>Which action to perfom, either a cut or a simple copy.</h2>
+<pre>$action : </pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"><code>1</code></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
 <a id="property_type"> </a><div class="element clickable property public property_type" data-toggle="collapse" data-target=".property_type .collapse" title="public">
 <h2>The Type of input to use.</h2>
 <pre>$type : </pre>
@@ -187,6 +207,20 @@ echo \Eddmash\Clipboard\Clipboard::widget([
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
+<h3>
+<i title="Constants" class="icon-custom icon-constant"></i> Constants</h3>
+<a id="constant_COPY"> </a><div class="element clickable constant  constant_COPY" data-toggle="collapse" data-target=".constant_COPY .collapse" title="">
+<h2>COPY</h2>
+<pre>COPY = 1 </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_CUT"> </a><div class="element clickable constant  constant_CUT" data-toggle="collapse" data-target=".constant_CUT .collapse" title="">
+<h2>CUT</h2>
+<pre>CUT = 2 </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
 </div>
 </div>
 </div>
@@ -194,7 +228,7 @@ echo \Eddmash\Clipboard\Clipboard::widget([
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor v2.8.5</a> and<br>
-            generated on 2016-11-11T17:53:43+03:00.<br></footer></div>
+            generated on 2016-11-11T18:30:59+03:00.<br></footer></div>
 </div>
 </body>
 </html>
