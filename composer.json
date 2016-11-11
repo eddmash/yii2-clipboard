@@ -1,5 +1,5 @@
 {
-    "name": "yiisoft/yii2-clipboard",
+    "name": "eddmash/yii2-clipboard",
     "description": "The Clipboard js extension for the Yii2 framework",
     "keywords": ["yii2", "clipboard js"],
     "type": "yii2-extension",
