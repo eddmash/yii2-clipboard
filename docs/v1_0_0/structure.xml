@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project title="Clipboard Asset v1.0.0 Docs" version="v2.8.5">
+  <partials/>
+  <file path="ClipboardAsset.php" generated-path="ClipboardAsset.html" hash="30fa361967768e630d9a838c3a119bda" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="BootstrapAsset">\yii\bootstrap\BootstrapAsset</namespace-alias>
+    <class final="false" abstract="false" namespace="Eddmash\Clipboard" line="10" package="Default">
+      <extends>\yii\bootstrap\BootstrapAsset</extends>
+      <name>ClipboardAsset</name>
+      <full_name>\Eddmash\Clipboard\ClipboardAsset</full_name>
+      <docblock line="10">
+        <description>Asset bundle for Clipboard js.</description>
+        <long-description></long-description>
+        <tag name="package" line="10" description="Default"/>
+      </docblock>
+      <property static="false" visibility="public" namespace="Eddmash\Clipboard" line="12" package="Default">
+        <name>$sourcePath</name>
+        <full_name>\Eddmash\Clipboard\ClipboardAsset::sourcePath</full_name>
+        <default>'@bower/clipboard/dist'</default>
+        <docblock line="12">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="public" namespace="Eddmash\Clipboard" line="13" package="Default">
+        <name>$js</name>
+        <full_name>\Eddmash\Clipboard\ClipboardAsset::js</full_name>
+        <default>array('clipboard.min.js')</default>
+        <docblock line="13">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="12" code="PPC:ERR-50007">No summary for property $sourcePath</error>
+      <error line="13" code="PPC:ERR-50007">No summary for property $js</error>
+    </parse_markers>
+    <source>eJxVjM0KwjAQhO/7FHsQCkXaB6jiH969Ww/5WWlK2oRsior47sZKK85pd+abWW184wF60RF7oQiPWneCm/pgjZdOBF0BDEz4MKaWzkWOQfh6P107ZooJKfMcMMfxRTn02hJeXcB5BlsuElGCsoL5538bdI/Ua8b/XXgCJvlBWqNwwW4Iik4iNrjGbCvdjUKppqFSG45Z9ddoOZHn0foom+GiM33RcrYcs0sFL3gDVZBWjQ==</source>
+  </file>
+  <file path="Clipboard.php" generated-path="Clipboard.html" hash="098111eb614c24cb1fb785d3560e4897" package="Default">
+    <docblock line="0">
+      <description>Created by PhpStorm.</description>
+      <long-description>User: edd
+Date: 11/11/16
+Time: 3:18 PM.</long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="Html">\yii\bootstrap\Html</namespace-alias>
+    <namespace-alias name="InputWidget">\yii\bootstrap\InputWidget</namespace-alias>
+    <namespace-alias name="ArrayHelper">\yii\helpers\ArrayHelper</namespace-alias>
+    <namespace-alias name="View">\yii\web\View</namespace-alias>
+    <class final="false" abstract="false" namespace="Eddmash\Clipboard" line="34" package="Default">
+      <extends>\yii\bootstrap\InputWidget</extends>
+      <name>Clipboard</name>
+      <full_name>\Eddmash\Clipboard\Clipboard</full_name>
+      <docblock line="34">
+        <description>Clipboard widget is a Yii2 wrapper for the clipboard.js (https://clipboardjs.com/).</description>
+        <long-description>It contains a ClipboardWidget which creates an input element style with bootstrap.
+The widget outputs an input element with a copy option.
+
+Usage example:
+
+```php
+
+echo \Eddmash\Clipboard\Clipboard::widget([
+     'model' =&gt; $model,
+     'attribute' =&gt; 'email',
+     'options'=&gt;['readonly'=&gt;""]
+]);
+
+```</long-description>
+        <tag name="package" line="34" description="Default"/>
+      </docblock>
+      <property static="false" visibility="public" namespace="Eddmash\Clipboard" line="41" package="Default">
+        <name>$type</name>
+        <full_name>\Eddmash\Clipboard\Clipboard::type</full_name>
+        <default></default>
+        <docblock line="41">
+          <description>The Type of input to use.</description>
+          <long-description></long-description>
+          <tag name="var" line="41" description="" type="" variable=""/>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Eddmash\Clipboard" line="48" package="Default">
+        <name>run</name>
+        <full_name>\Eddmash\Clipboard\Clipboard::run()</full_name>
+        <docblock line="48">
+          <description>Executes the widget.</description>
+          <long-description></long-description>
+          <tag name="return" line="48" description="the result of widget execution to be outputted" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Eddmash\Clipboard" line="70" package="Default">
+        <name>input</name>
+        <full_name>\Eddmash\Clipboard\Clipboard::input()</full_name>
+        <docblock line="70">
+          <description>Output the input type.</description>
+          <long-description></long-description>
+          <tag name="param" line="70" description="" type="\yii\web\View" variable="$view">
+            <type>\yii\web\View</type>
+          </tag>
+          <tag name="param" line="70" description="" type="" variable="$type"/>
+          <tag name="param" line="70" description="" type="null" variable="$name">
+            <type>null</type>
+          </tag>
+          <tag name="param" line="70" description="" type="null" variable="$value">
+            <type>null</type>
+          </tag>
+          <tag name="param" line="70" description="" type="array" variable="$options">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="70" description="" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$view</name>
+          <default></default>
+          <type>\yii\web\View</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$type</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$name</name>
+          <default>null</default>
+          <type>null</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$value</name>
+          <default>null</default>
+          <type>null</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$options</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="private" namespace="Eddmash\Clipboard" line="86" package="Default">
+        <name>asHtml</name>
+        <full_name>\Eddmash\Clipboard\Clipboard::asHtml()</full_name>
+        <docblock line="86">
+          <description>Creates the actual html.</description>
+          <long-description></long-description>
+          <tag name="param" line="86" description="" type="\yii\web\View" variable="$view">
+            <type>\yii\web\View</type>
+          </tag>
+          <tag name="param" line="86" description="" type="" variable="$type"/>
+          <tag name="param" line="86" description="" type="null" variable="$name">
+            <type>null</type>
+          </tag>
+          <tag name="param" line="86" description="" type="null" variable="$value">
+            <type>null</type>
+          </tag>
+          <tag name="param" line="86" description="" type="array" variable="$options">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="86" description="" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$view</name>
+          <default></default>
+          <type>\yii\web\View</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$type</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$name</name>
+          <default>null</default>
+          <type>null</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$value</name>
+          <default>null</default>
+          <type>null</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$options</name>
+          <default>array()</default>
+          <type>array</type>
+        </argument>
+      </method>
+    </class>
+    <source>eJzVVluL4zYUfvevOE0DsodcmC6U4jSzXdKF3YXShU63lCQwiq3EWuQLkpxMKPPf9+jixImd6UtfKoaJrXP7zvmOjvzz2yqrgundXQB3sJCMapbC5gifs+oPXcp8Yvb/VEzGwNLUvPyKKjHc30/N349m55HnuPMmvv8JPv9mDKZBUNCcqYomDN6naU5VtloIXm1KKtNZENSKwZHz1aYstdKSVqsPOheznv2PRVXrv3i6Y/oszpiomFSrd1LS4wf7chYe2Gb1hbMDhmnSaiLDwToCroDC35z/AAeMgdawLSXojEHSqE6+KggzrSsVT6en3a9qkpT5NDJJGs8fNSRloSkvjMdTHIcXDhlPMkhsUVFeADfJABMsZ4UGpY+CISSdwSlfW+7HjDVIy1qjSY+xNaMYvTpCWWleFpPAUUV3DNgzzSvBYg/z6enJsOxeWJKVsOqwcn6KYxc8XBp1u0hepkwQmD/A0D6OziKqteSbWjMrJiynXJCW3KFTZP6wJFiKtCzEEV8Gg7XRWUezM0jbOomgSrU4Y8+aFamCVicE/wTGtaXXLFeyx2PFoNz6QukSsCMmXqHR+2VPpX+e2t+q3giewFCjMXbMldv3zyypDXn6REnHo2S6lgWyKXmxs4qSqVpoA8WzyKwbrIJBtWGeVTxpfVC2dZFYXVkXYWQlLl2zmmBMbOPYJhqeZGYNdcbV+AGDmiMQRqM+qcm1V3Ci8lJqzmYco893jfwLFTULvZVriI6P/ti+G04iQz+ul07pf7c1svX0hCLqTvErKmkOJlcY7vH/lcDSerVX1EIgHDOg+iV7k9yViJpJA8ML9DdaoI9TpaluU+uYO8MeOaQjBwvmFsrIQzm/+vC4sVy/2hlUGc7CHt+N07O3mwws/OAyFNBE11RAhl7/fxxIvsdEOiT4Iv2nLPAthN9xpXB6NnpLYpySdRS19OyJuFJAh34MNRovQVfXQHO65mnWo2HhOhWPfO6ww1v3E0PoyhR5DT/4rBueomHrYrUH3593H2IEhKdkBFsqFItmF8lbe4znZPFlwtb3FW6c7XzbAuCGDU3ThVILcxW0w+I1nY/NjStLQVqRXzOy8aJ2isaBuUPn3k7TXUhSvid9Y++G8ErBHmgsCSGtgzV5zQI/jgpjsMAbHH+XHd1mkZRqOj59gow1lciIu2y/JxMsahfZLVtqO9/ZJjbwbVN7DztVm914J8u6GmOR8exsdDH+t9j2+8bHqqUqZVyVHCsvZzfCrju7UVdxeQMYHrBL5QvFRDAqt/yZnGNctIQ5/uMHyXZcIcBPKhwUOBVOHyEhmZiMBybjyYBEg7axnzxNWzXj9CX4BroNLLo=</source>
+  </file>
+  <package name="Default" full_name="Default"/>
+  <package name="global" full_name="global"/>
+  <namespace name="Eddmash" full_name="Eddmash">
+    <namespace name="Clipboard" full_name="Eddmash\Clipboard"/>
+  </namespace>
+  <deprecated count="0"/>
+</project>
