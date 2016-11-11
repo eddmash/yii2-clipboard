@@ -74,13 +74,17 @@ class Clipboard extends InputWidget
      * @param string $type the input type.
      * @param null $name name of the input element.
      * @param null $value the value for the input.
+     * @param null $value the value for the input.
      * @param array $options any other attribute options to pass to the input.
      *
      * @return string
      */
-    public static function input(View $view, $type, $name = null, $value = null, $options = [])
+    public static function input(View $view, $type, $name = null, $value = null, $options = [], $action)
     {
-        return self::asHtml($view, $type, $name, $value, $options);
+        if ($action===null):
+            $action = self::COPY;
+        endif;
+        return self::asHtml($view, $type, $action, $name, $value, $options);
     }
 
     /**
@@ -94,7 +98,7 @@ class Clipboard extends InputWidget
      * @param array $options any other attribute options to pass to the input.
      * @return mixed
      */
-    private static function asHtml(View $view, $type, $action=1,$name = null, $value = null, $options = [])
+    private static function asHtml(View $view, $type, $action, $name = null, $value = null, $options = [])
     {
         if (!isset($options['type'])) {
             $options['type'] = $type;
