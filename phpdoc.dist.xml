@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpdoc>
+    <title>Clipboard Asset v1.0.0 Docs</title>
+    <parser>
+        <target>docs/raw/</target>
+        <default-package-name>yii2-clipboard</default-package-name>
+    </parser>
+    <transformer>
+        <target>docs/v1_0_0</target>
+    </transformer>
+    <files>
+        <directory>./src</directory>
+    </files>
+
+    <transformations>
+        <template name="responsive"/>
+    </transformations>
+</phpdoc>

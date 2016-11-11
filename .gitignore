@@ -1,0 +1,15 @@
+# Created by .ignore support plugin (hsz.mobi)
+
+#-------------------------
+# Composer
+#-------------------------
+vendor/
+composer.lock
+cs_fixer*
+
+
+#-------------------------
+# # Jetbrains editors (PHPStorm, etc)
+#-------------------------
+.idea
+docs
