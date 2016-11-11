@@ -2,15 +2,12 @@
 
 namespace Eddmash\Clipboard;
 
-
-use yii\web\AssetBundle;
+use yii\bootstrap\BootstrapAsset;
 
 /**
  * Asset bundle for Clipboard js.
- *
- * @package Eddmash\Clipboard
  */
-class ClipboardAsset extends AssetBundle
+class ClipboardAsset extends BootstrapAsset
 {
     public $sourcePath = '@bower/clipboard/dist';
     public $js = [
