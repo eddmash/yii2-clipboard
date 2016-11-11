@@ -79,7 +79,7 @@ class Clipboard extends InputWidget
      *
      * @return string
      */
-    public static function input(View $view, $type, $name = null, $value = null, $options = [], $action)
+    public static function input(View $view, $type, $name = null, $value = null, $options = [], $action=null)
     {
         if ($action===null):
             $action = self::COPY;
