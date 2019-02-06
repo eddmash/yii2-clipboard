@@ -137,7 +137,7 @@ class Clipboard extends InputWidget
             ['class' => 'clearfix']
         );
 
-        $view->registerJs("new Clipboard('.btn-".$id."')");
+        $view->registerJs("new ClipboardJS('.btn-".$id."')");
 
         return $content;
     }
