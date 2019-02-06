@@ -11,6 +11,6 @@ class ClipboardAsset extends BootstrapAsset
 {
     public $sourcePath = '@bower/clipboard/dist';
     public $js = [
-        'clipboardJS.min.js',
+        'clipboard.min.js',
     ];
 }
