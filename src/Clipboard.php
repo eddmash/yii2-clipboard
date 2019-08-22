@@ -64,6 +64,7 @@ class Clipboard extends InputWidget
      */
     public function run()
     {
+        ClipboardAsset::register($this->getView());
         return self::asHtml(
             $this->getView(),
             $this->type,
@@ -136,7 +137,8 @@ class Clipboard extends InputWidget
                 ['class' => 'input-group']),
             ['class' => 'clearfix']
         );
-
+        
+        ClipboardAsset::register($view);
         $view->registerJs("new ClipboardJS('.btn-".$id."')");
 
         return $content;
